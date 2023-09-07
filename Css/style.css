@@ -1,0 +1,120 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+
+:root{
+    --color-bg: #001C30;
+    --color-primary: #f7f7f7;
+    --color-bg-text: #be3b3b;
+
+
+    --container-width-lg: 60%;
+    --container-width-md: 88%;
+    --container-width-sm: 98%;
+
+
+    --article-width-lg: 88%;
+    --article-width-md: 90%;
+    --article-width-sm: 100%;
+
+
+    --container-padding: 3.5rem 0;
+    --container-border-radius: .20rem;
+
+    --transition: .35s all ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-bg);
+    height: 75vh;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg-text);
+    padding: var(--container-padding);
+    width: var(--container-width-lg);
+}
+
+article {
+    background-color: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: var(--article-width-lg);
+    border: 8px soild blue;
+}
+
+
+.article-content-container {
+    padding: 1rem 2rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.article-img-container {
+    width: 100%;
+}
+
+.article-img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ==================================== MEDIA QURIES FOR TABLETS / MEDIUM SCREEN ===================================== */
+@media screen and (max-width: 1024px){
+    .container {
+        width: var(--container-width-md);
+    }
+
+    article {
+        width: var(--article-width-md);
+    }
+
+}
+
+
+
+/* ==================================== MEDIA QURIES FOR MOBILE / SMALL SCREEN ===================================== */
+@media screen and (max-width: 600px){
+    .container {
+        width: var(--container-width-sm);
+        padding: 1.4rem;
+    }
+
+    article {
+        width: var(--article-width-sm);
+    }
+
+    .article-content-container {
+        padding: 1rem 0.9rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
